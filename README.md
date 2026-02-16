@@ -1,4 +1,4 @@
-# 🤖 Personal AI Assistant
+# Personal AI Assistant
 
 ### Local LLM + Gmail API + Google Calendar API
 
