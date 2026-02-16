@@ -282,8 +282,3 @@ gmail_token.json\
 -   📊 Email priority scoring
 -   📌 Task extraction from emails
 
-------------------------------------------------------------------------
-
-# 📜 License
-
-MIT License
