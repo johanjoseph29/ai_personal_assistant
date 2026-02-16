@@ -1,42 +1,52 @@
-# Personal AI Assistant
+# 🤖 Personal AI Assistant
 
-Local LLM + Gmail API + Google Calendar API
+### Local LLM + Gmail API + Google Calendar API
 
-A local AI-powered personal assistant built using LangChain and Ollama.
+A powerful local AI-powered personal assistant built using **LangChain**
+and **Ollama**.
 
-This assistant can: - Read unread emails - Retrieve and summarize the
-latest email - Send emails - Create Google Calendar events using natural
-language - Automatically route tasks using a strict JSON-based tool
-system
+This assistant can: - 📧 Read unread emails\
+- 📝 Retrieve and summarize the latest email\
+- 📤 Send emails\
+- 📅 Create Google Calendar events using natural language\
+- 🌐 Perform web scraping and automated web-based tasks\
+- 🧠 Automatically route tasks using a strict JSON-based tool system
 
-The assistant runs locally using Ollama (llama3.2 model) and integrates
-with Google services for real productivity automation.
+The assistant runs locally using **Ollama (llama3.2 model)** and
+integrates with Google services for real productivity automation.
 
 ------------------------------------------------------------------------
 
-# Features
+# 🚀 Features
 
-## Email Management
+## 📬 Email Management
 
 -   List unread emails from last 2 days
 -   Retrieve latest email
 -   Summarize email content using local LLM
 -   Send emails using structured input format
 
-## Calendar Management
+## 📅 Calendar Management
 
 -   Create events using natural language
 -   Automatically extract date and time
 -   Automatically extract event title
 
-## Intelligent Tool Routing
+## 🌐 Web Scraping & Automation
+
+-   Scrape web data
+-   Perform automated browser tasks
+-   Extract information from websites
+-   Automate repetitive web-based workflows
+
+## 🧠 Intelligent Tool Routing
 
 -   Strict JSON-based routing
 -   LLM decides which tool to call
 -   Safe JSON parsing before execution
 -   Robust handling of null inputs
 
-## Fully Local AI Brain
+## 💻 Fully Local AI Brain
 
 -   Uses Ollama (llama3.2)
 -   No OpenAI API required
@@ -44,7 +54,30 @@ with Google services for real productivity automation.
 
 ------------------------------------------------------------------------
 
-# Tech Stack
+# 🏗 Architecture Overview
+
+1.  User enters natural language input.
+
+2.  Input is sent to local LLM.
+
+3.  LLM determines whether a tool is required.
+
+4.  If needed, LLM outputs strict JSON:
+
+    { "tool": "tool_name", "input": "tool_input" }
+
+5.  System safely parses JSON.
+
+6.  The selected tool executes.
+
+7.  Response is returned to the user.
+
+This ensures a clean separation between: - 🧠 Reasoning (LLM) - ⚙
+Execution (Tools)
+
+------------------------------------------------------------------------
+
+# 🛠 Tech Stack
 
 -   Python 3.10+
 -   LangChain
@@ -56,9 +89,9 @@ with Google services for real productivity automation.
 
 ------------------------------------------------------------------------
 
-# Installation & Setup Guide
+# 📦 Installation & Setup Guide
 
-## 1. Install Python
+## 1️⃣ Install Python
 
 Ensure Python 3.10 or above is installed.
 
@@ -68,7 +101,7 @@ python --version
 
 ------------------------------------------------------------------------
 
-## 2. Download or Clone the Project
+## 2️⃣ Download or Clone the Project
 
 If using Git:
 
@@ -81,7 +114,7 @@ Or manually download the project as a ZIP file and extract it.
 
 ------------------------------------------------------------------------
 
-## 3. Install Required Python Packages
+## 3️⃣ Install Required Python Packages
 
 ``` bash
 pip install langchain langchain-ollama simplegmail google-api-python-client google-auth google-auth-oauthlib dateparser pytz
@@ -89,13 +122,13 @@ pip install langchain langchain-ollama simplegmail google-api-python-client goog
 
 ------------------------------------------------------------------------
 
-## 4. Install Ollama
+## 4️⃣ Install Ollama
 
 Download Ollama from:
 
 https://ollama.com
 
-After installing, pull the required model:
+Pull the required model:
 
 ``` bash
 ollama pull llama3.2
@@ -111,9 +144,9 @@ Keep this terminal running.
 
 ------------------------------------------------------------------------
 
-# Google API Configuration
+# 🔐 Google API Configuration
 
-## 5. Create Google Cloud Project
+## 5️⃣ Create Google Cloud Project
 
 1.  Go to https://console.cloud.google.com\
 2.  Create a new project\
@@ -124,7 +157,7 @@ Keep this terminal running.
 
 ------------------------------------------------------------------------
 
-## 6. Create OAuth Credentials
+## 6️⃣ Create OAuth Credentials
 
 1.  Go to APIs & Services → Credentials\
 2.  Click "Create Credentials"\
@@ -134,7 +167,7 @@ Keep this terminal running.
 
 ------------------------------------------------------------------------
 
-## 7. Prepare Credential Files
+## 7️⃣ Prepare Credential Files
 
 You need two copies of the downloaded JSON file.
 
@@ -150,7 +183,7 @@ Place both files in the project root directory.
 
 ------------------------------------------------------------------------
 
-## 8. First-Time Authentication
+## 8️⃣ First-Time Authentication
 
 When running the assistant for the first time:
 
@@ -166,7 +199,7 @@ These store your access tokens securely.
 
 ------------------------------------------------------------------------
 
-# Running the Assistant
+# ▶ Running the Assistant
 
 1.  Start Ollama:
 
@@ -186,7 +219,7 @@ AI Agent Running...
 
 ------------------------------------------------------------------------
 
-# Example Commands
+# 💬 Example Commands
 
 Check unread emails:
 
@@ -206,7 +239,18 @@ schedule gym tomorrow at 6am
 
 ------------------------------------------------------------------------
 
-# Security
+# 📂 Project Structure
+
+ai_personal_assistant.py\
+credentials.json\
+client_secret.json\
+token.pkl\
+gmail_token.json\
+README.md
+
+------------------------------------------------------------------------
+
+# 🔒 Security
 
 Do NOT commit these files:
 
@@ -225,17 +269,21 @@ gmail_token.json\
 
 ------------------------------------------------------------------------
 
-# Future Improvements
+# 🔮 Future Improvements
 
--   News API integration
--   Internship deadline extractor
--   Auto reminder creation
--   Google Drive integration
--   Telegram bot interface
--   Conversation memory
--   Multi-step reasoning agent
--   Email priority scoring
--   Task extraction from emails
+-   🌦 Weather API integration
+-   📰 News API integration
+-   🎯 Internship deadline extractor
+-   ⏰ Auto reminder creation
+-   📁 Google Drive integration
+-   📱 Telegram bot interface
+-   🧠 Conversation memory
+-   🔁 Multi-step reasoning agent
+-   📊 Email priority scoring
+-   📌 Task extraction from emails
 
 ------------------------------------------------------------------------
 
+# 📜 License
+
+MIT License
